@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Products</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.products-page{
+padding:120px 30px 50px;
+display:flex;
+gap:30px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:280px;
+background:#181818;
+padding:25px;
+border-radius:20px;
+height:fit-content;
+}
+
+.sidebar h2{
+margin-bottom:20px;
+color:#00ff88;
+}
+
+.sidebar input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#111;
+color:white;
+margin-bottom:20px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:10px 0;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar li:hover{
+color:#00ff88;
+}
+
+/* PRODUCTS */
+
+.products-content{
+flex:1;
+}
+
+.products-content h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.products-content p{
+color:#aaa;
+margin-bottom:30px;
+}
+
+.products-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.product-card{
+background:#181818;
+padding:20px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(0,255,136,.3);
+}
+
+.product-card img{
+width:100%;
+height:220px;
+object-fit:contain;
+}
+
+.product-card h3{
+margin:15px 0;
+}
+
+.price{
+font-size:24px;
+color:#00ff88;
+margin-bottom:15px;
+}
+
+.product-card button{
+width:100%;
+padding:12px;
+background:#00ff88;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CART */
+
+.cart-box{
+width:300px;
+background:#181818;
+padding:20px;
+border-radius:20px;
+height:fit-content;
+position:sticky;
+top:120px;
+}
+
+.cart-box h2{
+margin-bottom:15px;
+}
+
+.total{
+font-size:28px;
+color:#00ff88;
+margin-top:20px;
+}
+
+.checkout-btn{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#00ff88;
+border:none;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h1>Gaming Store</h1>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="builder.html">PC Builder</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<div class="products-page">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>Search</h2>
+
+<input
+type="text"
+placeholder="Search products...">
+
+<h2>Categories</h2>
+
+<ul>
+
+<li>Gaming PCs</li>
+<li>Graphics Cards</li>
+<li>Processors</li>
+<li>Monitors</li>
+<li>Keyboards</li>
+<li>Gaming Mouse</li>
+<li>Headsets</li>
+<li>Gaming Chairs</li>
+
+</ul>
+
+</div>
+
+<!-- PRODUCTS -->
+
+<div class="products-content">
+
+<h1>Gaming Products</h1>
+
+<p>
+Build your ultimate gaming setup
+</p>
+
+<div class="products-grid">
+
+<div class="product-card">
+
+<img src="images/pc.png">
+
+<h3>Gaming PC</h3>
+
+<div class="price">$2999</div>
+
+<button onclick="addToCart('Gaming PC',2999)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/gpu.png">
+
+<h3>RTX 5090</h3>
+
+<div class="price">$1899</div>
+
+<button onclick="addToCart('RTX 5090',1899)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/cpu.png">
+
+<h3>Intel i7</h3>
+
+<div class="price">$399</div>
+
+<button onclick="addToCart('Intel i7',399)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/monitor.png">
+
+<h3>240Hz Monitor</h3>
+
+<div class="price">$399</div>
+
+<button onclick="addToCart('Monitor',399)">
+Add To Cart
+</button>
+
+</div>
+<div class="product-card">
+
+<img src="images/keyboard.png">
+
+<h3>Mechanical Keyboard</h3>
+
+<div class="price">$129</div>
+
+<button
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/mouse.png">
+
+<h3>Gaming Mouse</h3>
+
+<div class="price">$59</div>
+
+<button onclick="addToCart('Gaming Mouse',59)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/headset.png">
+
+<h3>Gaming Headset</h3>
+
+<div class="price">$99</div>
+
+<button onclick="addToCart('Gaming Headset',99)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/chair.png">
+
+<h3>Gaming Chair</h3>
+
+<div class="price">$249</div>
+
+<button onclick="addToCart('Gaming Chair',249)">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CART -->
+
+<div class="cart-box">
+
+<h2>🛒 Cart</h2>
+
+<div id="cartItems">
+
+<p>No items yet</p>
+
+</div>
+
+<div class="total">
+
+$<span id="cartTotal">0</span>
+
+</div>
+
+<button
+class="checkout-btn"
+onclick="location.href='checkout.html'">
+
+Proceed To Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<!-- WHATSAPP -->
+
+<a
+href="https://wa.me/96500000000"
+target="_blank"
+
+style="
+position:fixed;
+bottom:30px;
+right:30px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+">
+
+💬
+
+</a>
+
+<!-- GMAIL -->
+
+<a
+href="mailto:gamingstore@gmail.com"
+
+style="
+position:fixed;
+bottom:100px;
+right:30px;
+width:60px;
+height:60px;
+background:#EA4335;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+">
+
+📧
+
+</a>
+
+<script>
+
+let total = 0;
+
+function addToCart(name,price){
+
+const cart =
+document.getElementById(
+"cartItems"
+);
+
+if(
+cart.innerHTML.includes(
+"No items yet"
+)
+){
+cart.innerHTML = "";
+}
+
+let item =
+document.createElement("p");
+
+item.innerHTML =
+name + " - $" + price;
+
+cart.appendChild(item);
+
+total += price;
+
+document.getElementById(
+"cartTotal"
+).innerText =
+total;
+
+}
+
+function checkout(){
+
+alert(
+"Thank you for your order!"
+);
+
+}
+
+</script>
+
+</body>
+</html>

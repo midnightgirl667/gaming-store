@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.register-page{
+
+padding:150px 20px 80px;
+
+min-height:100vh;
+
+}
+
+.register-container{
+
+max-width:550px;
+
+margin:auto;
+
+background:#181818;
+
+padding:40px;
+
+border-radius:20px;
+
+border:1px solid #222;
+
+}
+
+.register-container h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#00ff88;
+
+font-size:50px;
+
+}
+
+.register-container input{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:none;
+
+border-radius:10px;
+
+background:#111;
+
+color:white;
+
+}
+
+.register-container button{
+
+width:100%;
+
+padding:15px;
+
+background:#00ff88;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.login-link{
+
+text-align:center;
+
+margin-top:20px;
+
+}
+
+.login-link a{
+
+color:#00ff88;
+
+text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h1>Gaming Store</h1>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="builder.html">PC Builder</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<section class="register-page">
+
+<div class="register-container">
+
+<h1>Create Account</h1>
+
+<input
+type="text"
+placeholder="Full Name">
+
+<input
+type="email"
+placeholder="Email">
+
+<input
+type="password"
+placeholder="Password">
+
+<input
+type="password"
+placeholder="Confirm Password">
+
+<button onclick="register()">
+
+Create Account
+
+</button>
+
+<div class="login-link">
+
+<p>
+Already have an account?
+<a href="login.html">
+Login Here
+</a>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function register(){
+
+alert(
+"Account created successfully!"
+);
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
