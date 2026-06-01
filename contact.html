@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.contact-page{
+
+padding:150px 20px 80px;
+
+min-height:100vh;
+
+}
+
+.contact-container{
+
+max-width:700px;
+
+margin:auto;
+
+background:#181818;
+
+padding:40px;
+
+border-radius:20px;
+
+border:1px solid #222;
+
+}
+
+.contact-container h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#00ff88;
+
+font-size:50px;
+
+}
+
+.contact-container input,
+.contact-container textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:none;
+
+border-radius:10px;
+
+background:#111;
+
+color:white;
+
+}
+
+.contact-container textarea{
+
+height:150px;
+
+resize:none;
+
+}
+
+.contact-container button{
+
+width:100%;
+
+padding:15px;
+
+background:#00ff88;
+
+border:none;
+
+border-radius:10px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+font-size:18px;
+
+}
+
+.info{
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+.info p{
+
+margin:10px 0;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h1>Gaming Store</h1>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="builder.html">PC Builder</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<section class="contact-page">
+
+<div class="contact-container">
+
+<h1>Contact Us</h1>
+
+<input
+type="text"
+placeholder="Your Name">
+
+<input
+type="email"
+placeholder="Your Email">
+
+<textarea
+placeholder="Your Message">
+</textarea>
+
+<button onclick="sendMessage()">
+
+Send Message
+
+</button>
+
+<div class="info">
+
+<p>📧 midnightgirl197@gmail.com</p>
+
+<p>📞 +965 41440941</p>
+
+<p>📍 Kuwait City</p>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function sendMessage(){
+
+alert(
+"Message sent successfully!"
+);
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

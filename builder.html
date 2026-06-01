@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PC Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.builder-page{
+
+padding:120px 30px 50px;
+
+}
+
+.builder-title{
+
+text-align:center;
+
+font-size:50px;
+
+margin-bottom:10px;
+
+}
+
+.builder-subtitle{
+
+text-align:center;
+
+color:#aaa;
+
+margin-bottom:40px;
+
+}
+
+.builder-container{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:30px;
+
+}
+
+.builder-left{
+
+background:#181818;
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+.builder-left h2{
+
+margin-bottom:20px;
+
+color:#00ff88;
+
+}
+
+.builder-item{
+
+margin-bottom:25px;
+
+}
+
+.builder-item label{
+
+display:block;
+
+margin-bottom:10px;
+
+font-weight:bold;
+
+}
+
+.builder-item select{
+
+width:100%;
+
+padding:15px;
+
+background:#111;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+}
+
+.summary{
+
+background:#181818;
+
+padding:25px;
+
+border-radius:20px;
+
+height:fit-content;
+
+position:sticky;
+
+top:120px;
+
+}
+
+.summary h2{
+
+margin-bottom:20px;
+
+color:#00ff88;
+
+}
+
+.summary p{
+
+margin-bottom:15px;
+
+}
+
+.total-price{
+
+font-size:35px;
+
+color:#00ff88;
+
+margin-top:20px;
+
+}
+
+.build-btn{
+
+width:100%;
+
+padding:15px;
+
+background:#00ff88;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+@media(max-width:900px){
+
+.builder-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h1>Gaming Store</h1>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="builder.html">PC Builder</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<div class="builder-page">
+
+<h1 class="builder-title">
+PC Builder
+</h1>
+
+<p class="builder-subtitle">
+Create your dream gaming setup
+</p>
+
+<div class="builder-container">
+
+<div class="builder-left">
+
+<h2>Select Components</h2>
+
+<div class="builder-item">
+
+<label>CPU</label>
+
+<select id="cpu">
+
+<option value="150">
+Intel i5 - $150
+</option>
+
+<option value="300">
+Intel i7 - $300
+</option>
+
+<option value="500">
+Intel i9 - $500
+</option>
+
+</select>
+
+</div>
+
+<div class="builder-item">
+
+<label>GPU</label>
+
+<select id="gpu">
+
+<option value="400">
+RTX 4060 - $400
+</option>
+
+<option value="800">
+RTX 5070 - $800
+</option>
+
+<option value="1800">
+RTX 5090 - $1800
+</option>
+
+</select>
+
+</div>
+
+<div class="builder-item">
+
+<label>RAM</label>
+
+<select id="ram">
+
+<option value="60">
+16GB RGB RAM - $60
+</option>
+
+<option value="120">
+32GB RGB RAM - $120
+</option>
+
+<option value="240">
+64GB RGB RAM - $240
+</option>
+
+</select>
+
+</div>
+
+<div class="builder-item">
+
+<label>Storage</label>
+
+<select id="storage">
+
+<option value="80">
+1TB SSD - $80
+</option>
+
+<option value="150">
+2TB SSD - $150
+</option>
+
+<option value="280">
+4TB SSD - $280
+</option>
+
+</select>
+
+</div>
+
+<div class="builder-item">
+
+<label>Case</label>
+
+<select id="pcCase">
+
+<option value="100">
+RGB Case - $100
+</option>
+
+<option value="180">
+Premium RGB Case - $180
+</option>
+
+<option value="300">
+Luxury RGB Case - $300
+</option>
+
+</select>
+
+</div>
+
+<button
+class="build-btn"
+onclick="calculateBuild()">
+
+Calculate Build
+
+</button>
+
+</div>
+
+<div class="summary">
+
+<h2>Build Summary</h2>
+
+<p>Choose your parts and calculate the total.</p>
+
+<div class="total-price"
+id="totalPrice">
+
+$0
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function calculateBuild(){
+
+let cpu =
+parseInt(document.getElementById("cpu").value);
+
+let gpu =
+parseInt(document.getElementById("gpu").value);
+
+let ram =
+parseInt(document.getElementById("ram").value);
+
+let storage =
+parseInt(document.getElementById("storage").value);
+
+let pcCase =
+parseInt(document.getElementById("pcCase").value);
+
+let total =
+cpu + gpu + ram + storage + pcCase;
+
+document.getElementById(
+"totalPrice"
+).innerText =
+"$" + total;
+
+}
+
+</script>
+
+</body>
+</html>

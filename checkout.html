@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.checkout-page{
+
+padding:120px 30px 50px;
+
+}
+
+.checkout-title{
+
+text-align:center;
+
+font-size:50px;
+
+margin-bottom:10px;
+
+}
+
+.checkout-subtitle{
+
+text-align:center;
+
+color:#aaa;
+
+margin-bottom:40px;
+
+}
+
+.checkout-container{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:30px;
+
+}
+
+.checkout-form{
+
+background:#181818;
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+.checkout-form h2{
+
+color:#00ff88;
+
+margin-bottom:20px;
+
+}
+
+.checkout-form input,
+.checkout-form select{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+background:#111;
+
+border:none;
+
+border-radius:10px;
+
+color:white;
+
+}
+
+.summary{
+
+background:#181818;
+
+padding:25px;
+
+border-radius:20px;
+
+height:fit-content;
+
+position:sticky;
+
+top:120px;
+
+}
+
+.summary h2{
+
+color:#00ff88;
+
+margin-bottom:20px;
+
+}
+
+.summary p{
+
+margin-bottom:15px;
+
+}
+
+.total{
+
+font-size:35px;
+
+color:#00ff88;
+
+margin-top:20px;
+
+}
+
+.place-order{
+
+width:100%;
+
+padding:15px;
+
+margin-top:20px;
+
+background:#00ff88;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+@media(max-width:900px){
+
+.checkout-container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+<h1>Gaming Store</h1>
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="builder.html">PC Builder</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="checkout-page">
+
+<h1 class="checkout-title">
+Checkout
+</h1>
+
+<p class="checkout-subtitle">
+Complete your order
+</p>
+
+<div class="checkout-container">
+
+<div class="checkout-form">
+
+<h2>Shipping Information</h2>
+
+<input
+type="text"
+placeholder="Full Name">
+
+<input
+type="email"
+placeholder="Email Address">
+
+<input
+type="text"
+placeholder="Phone Number">
+
+<input
+type="text"
+placeholder="Street Address">
+
+<input
+type="text"
+placeholder="City">
+
+<select>
+
+<option>KNET</option>
+<option>Visa</option>
+<option>Mastercard</option>
+<option>Cash On Delivery</option>
+
+</select>
+
+</div>
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<p>Gaming PC</p>
+
+<p>Gaming Headset</p>
+
+<p>Shipping: Free</p>
+
+<div class="total">
+
+$3098
+
+</div>
+
+<button
+class="place-order"
+onclick="placeOrder()">
+
+Place Order
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function placeOrder(){
+
+window.location.href =
+"order-history.html";
+
+}
+
+</script>
+
+</body>
+</html>
